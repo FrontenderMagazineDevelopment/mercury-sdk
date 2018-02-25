@@ -1,5 +1,4 @@
 .idea
-articles
 *.log
 node_modules
 /coverage
