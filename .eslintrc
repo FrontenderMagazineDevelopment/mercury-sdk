@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "plugins": [
+    "prettier",
+    "jsx-a11y",
+    "import",
+    'jest'
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "settings": {
+    "import/core-modules": "get",
+  },
+  rules: {
+    "prettier/prettier": "error",
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "no-await-in-loop": 0
+  }
+}
