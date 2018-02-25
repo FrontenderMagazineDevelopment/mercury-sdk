@@ -18,6 +18,8 @@ Custom error message for abstract server response
 
 ## MercuryWebParser
 
+-   **See: <https://mercury.postlight.com/web-parser/>**
+
 SDK for mercury api
 
 **Parameters**

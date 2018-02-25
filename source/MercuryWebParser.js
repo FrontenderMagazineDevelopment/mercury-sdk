@@ -8,6 +8,7 @@ import ErrorServerResponse from './ErrorServerResponse';
  * @namespace MercuryWebParser
  * @class
  * @param {string} key - mercury api key
+ * @see https://mercury.postlight.com/web-parser/
  */
 export default class MercuryWebParser {
   /**
