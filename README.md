@@ -30,8 +30,7 @@ Get content of page
 
 **Parameters**
 
--   `url`  
--   `null-null` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** url page url
+-   `url` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** page url
 
 **Examples**
 
@@ -52,8 +51,7 @@ Get content of page
 
 **Parameters**
 
--   `url`  
--   `null-null` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** url page url
+-   `url` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** page url
 
 **Examples**
 

@@ -12,7 +12,7 @@ import ErrorServerResponse from './ErrorServerResponse';
 export default class MercuryWebParser {
   /**
    * Constructor, save mercury api key
-   * @param {string} key mercury api key
+   * @param {string} key - mercury api key
    */
   constructor(key) {
     if (key === undefined) throw new Error(MercuryWebParser.message.key);
@@ -31,7 +31,7 @@ export default class MercuryWebParser {
 
   /**
    * Get content of page
-   * @param  {string} - url page url
+   * @param  {string} url - page url
    * @return {Promise.<Page>} - single page
    *
    * @example <caption>Get single page</caption>
@@ -55,7 +55,7 @@ export default class MercuryWebParser {
 
   /**
    * Get content of page
-   * @param  {string} - url page url
+   * @param  {string} url - page url
    * @return {Promise.<PagesList>} - array of pages
    *
    * @example <caption>Get all pages as array</caption>
