@@ -4,8 +4,9 @@
   "plugins": [
     "prettier",
     "jsx-a11y",
+    "react",
     "import",
-    'jest'
+    "jest"
   ],
   "env": {
     "browser": true,

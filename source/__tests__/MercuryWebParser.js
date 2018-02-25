@@ -3,15 +3,14 @@ import nock from 'nock';
 import MercuryWebParser from '../MercuryWebParser';
 import response from '../__mocks__/response.json';
 
-const service = '';
-const url = 'https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-2-page-load-performance-33b932d97cf2';
+const url =
+  'https://medium.com/@addyosmani/progressive-web-apps-with-react-js-part-2-page-load-performance-33b932d97cf2';
 const key = 'NeBIXVwRCXVIS3lJC74dsRAMBOaIK6H5EEkFudvs';
 
 describe('Mercury Web Parser', () => {
-
   it('Should throw error if you do not pass key', () => {
     expect(() => {
-      new MercuryWebParser();
+      new MercuryWebParser(); // eslint-disable-line
     }).toThrow();
   });
 
@@ -32,7 +31,7 @@ describe('Mercury Web Parser', () => {
       .reply(500);
     try {
       const parser = new MercuryWebParser(key);
-      const page = await parser.get(url);
+      await parser.get(url);
     } catch (error) {
       expect(error.name).toEqual('Server Response');
     }
@@ -55,10 +54,9 @@ describe('Mercury Web Parser', () => {
       .reply(500);
     try {
       const parser = new MercuryWebParser(key);
-      const page = await parser.getAll(url);
+      await parser.getAll(url);
     } catch (error) {
       expect(error.name).toEqual('Server Response');
     }
   });
-
 });

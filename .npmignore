@@ -5,3 +5,4 @@ node_modules
 src
 coverage
 .DS_Store
+docs

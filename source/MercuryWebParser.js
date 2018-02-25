@@ -1,4 +1,3 @@
-import 'babel-polyfill';
 import fetch from 'isomorphic-fetch';
 import ErrorServerResponse from './ErrorServerResponse';
 
@@ -49,7 +48,11 @@ export default class MercuryWebParser {
       },
     });
     if (!response.ok)
-      throw new ErrorServerResponse(response.status, response.statusText, MercuryWebParser.message.fail);
+      throw new ErrorServerResponse(
+        response.status,
+        response.statusText,
+        MercuryWebParser.message.fail,
+      );
     const data = await response.json();
     return data;
   }
