@@ -20,7 +20,7 @@
     "build:readme": "documentation readme source/*.js --section=\"Documentation\"",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --fix ./source --ext .js",
-    "test": "jest --coverage",
+    "test": "jest",
     "precommit": "git add . -A && lint-staged",
     "commitmsg": "commit-msg ${GIT_PARAMS}"
   },
@@ -47,6 +47,10 @@
     "url": "https://github.com/FrontenderMagazineDevelopment/mercury-sdk/issues"
   },
   "homepage": "https://github.com/FrontenderMagazineDevelopment/mercury-sdk#readme",
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"
   },
