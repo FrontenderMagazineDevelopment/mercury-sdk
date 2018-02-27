@@ -2,7 +2,7 @@
   "name": "@frontender-magazine/mercury-sdk",
   "version": "2.4.0",
   "description": "Get articles content",
-  "main": "lib/index.js",
+  "main": "lib/MercuryWebParser.js",
   "scripts": {
     "postversion": "git push && git push --tags",
     "version": "npm run build:prod && git add . -A",
