@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import fetch from 'isomorphic-fetch';
 import ErrorServerResponse from './ErrorServerResponse';
 
