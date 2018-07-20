@@ -21,8 +21,7 @@
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --fix ./source --ext .js",
     "test": "jest",
-    "precommit": "git add . -A && lint-staged",
-    "commitmsg": "commit-msg ${GIT_PARAMS}"
+    "precommit": "git add . -A && lint-staged"
   },
   "lint-staged": {
     "*.{js}": [
@@ -51,20 +50,22 @@
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
-  "dependencies": {
-    "isomorphic-fetch": "^2.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-export-default": "^7.0.0-beta.32",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.54",
+    "@babel/polyfill": "^7.0.0-beta.54",
+    "@babel/preset-env": "^7.0.0-beta.54",
     "@plasma-platform/tm-message-hook": "^1.0.1",
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
-    "babel-minify": "^0.2.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.5.2",
-    "babel-preset-stage-0": "^6.24.1",
-    "documentation": "^5.1.1",
+    "documentation": "^8.0.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-prettier": "^2.9.0",
@@ -74,6 +75,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
+    "isomorphic-fetch": "^2.2.1",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
     "jest-enzyme": "^3.6.1",
