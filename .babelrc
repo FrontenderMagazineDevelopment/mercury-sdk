@@ -1,11 +1,11 @@
-module.exports = {
+{
   "presets": [
     ["@babel/preset-env", {
         "targets": {
           "node": "current",
-          "browsers": ["> 3%", "ie 11"]
+          "browsers": ["last 3 versions"]
         },
-        debug: false,
+        "debug": false
     }],
   ],
   "plugins": [
@@ -18,4 +18,4 @@ module.exports = {
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-object-rest-spread"
   ]
-};
+}
