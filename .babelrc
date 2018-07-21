@@ -3,7 +3,7 @@
     ["@babel/preset-env", {
         "targets": {
           "node": "current",
-          "browsers": ["last 3 versions"]
+          "browsers": ["> 3%", "ie 11"]
         },
         "debug": false
     }],
