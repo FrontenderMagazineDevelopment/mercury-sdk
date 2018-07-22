@@ -14,7 +14,7 @@
 <dd><p>Get content of page</p>
 </dd>
 <dt><a href="#getAll">getAll(url)</a> ⇒ <code>Promise.&lt;PagesList&gt;</code></dt>
-<dd><p>Get content of page</p>
+<dd><p>Get content of all pages</p>
 </dd>
 </dl>
 
@@ -94,7 +94,7 @@ Get content of page
 <a name="getAll"></a>
 
 ## getAll(url) ⇒ <code>Promise.&lt;PagesList&gt;</code>
-Get content of page
+Get content of all pages
 
 **Kind**: global function  
 **Returns**: <code>Promise.&lt;PagesList&gt;</code> - - array of pages  
