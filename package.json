@@ -19,7 +19,7 @@
     "build:readme": "cat header.md > README.md && jsdoc2md ./source/*.js >> README.md",
     "lint": "npm-run-all lint:*",
     "lint:js": "eslint --fix ./source --ext .js",
-    "test": "jest",
+    "test": "jest --coverage",
     "precommit": "git add . -A && lint-staged"
   },
   "lint-staged": {
