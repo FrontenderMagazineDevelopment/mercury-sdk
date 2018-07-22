@@ -1,5 +1,7 @@
 module.exports = {
   "bail": true,
   "verbose": true,
-  "roots": ["source"]
+  "roots": ["source"],
+  "collectCoverage": true,
+  "coverageReporters": ["json", "html", "clover"],
 };

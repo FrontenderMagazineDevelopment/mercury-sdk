@@ -58,7 +58,7 @@ export default class MercuryWebParser {
   }
 
   /**
-   * Get content of page
+   * Get content of all pages
    * @param  {string} url - page url
    * @return {Promise.<PagesList>} - array of pages
    *
