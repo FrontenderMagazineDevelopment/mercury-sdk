@@ -1,3 +1,5 @@
 module.exports = {
-    "verbose": true
-}
+  "bail": true,
+  "verbose": true,
+  "roots": ["source"]
+};
