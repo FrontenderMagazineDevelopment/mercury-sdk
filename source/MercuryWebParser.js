@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch';
+import Mercury from '@postlight/mercury-parser';
 import ErrorServerResponse from './ErrorServerResponse';
 
 /**
@@ -6,26 +6,14 @@ import ErrorServerResponse from './ErrorServerResponse';
  *
  * @namespace MercuryWebParser
  * @class
- * @param {string} key - mercury api key
  * @see https://mercury.postlight.com/web-parser/
  */
 export default class MercuryWebParser {
-  /**
-   * Constructor, save mercury api key
-   * @param {string} key - mercury api key
-   */
-  constructor(key) {
-    if (key === undefined) throw new Error(MercuryWebParser.message.key);
-    this.service = 'https://mercury.postlight.com/parser';
-    this.key = key;
-  }
-
   /**
    * Messages of mercury SDK
    * @type {Object}
    */
   static message = {
-    key: 'You need API key',
     fail: 'Failed fetching page',
   };
 
@@ -35,26 +23,14 @@ export default class MercuryWebParser {
    * @return {Promise.<Page>} - single page
    *
    * @example <caption>Get single page</caption>
+   * import MercuryWebParser from '@frontender-magazine/mercury-sdk';
    * (async () => {
-   *   const parser = new MercuryWebParser('NeBIXVwRCXVIS3lJC74dsRAMBOaIK6H5EEkFudvs');
+   *   const parser = new MercuryWebParser();
    *   const page = await parser.get('http://alistapart.com/article/design-like-a-teacher');
    * })();
    */
   async get(url) {
-    const response = await fetch(`${this.service}?url=${url}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': this.key,
-      },
-    });
-    if (!response.ok)
-      throw new ErrorServerResponse(
-        response.status,
-        response.statusText,
-        MercuryWebParser.message.fail,
-      );
-    const data = await response.json();
-    return data;
+    return Mercury.parse(url);
   }
 
   /**
@@ -63,8 +39,9 @@ export default class MercuryWebParser {
    * @return {Promise.<PagesList>} - array of pages
    *
    * @example <caption>Get all pages as array</caption>
+   * import MercuryWebParser from '@frontender-magazine/mercury-sdk';
    * (async () => {
-   *   const parser = new MercuryWebParser('NeBIXVwRCXVIS3lJC74dsRAMBOaIK6H5EEkFudvs');
+   *   const parser = new MercuryWebParser();
    *   const pages = await parser.getAll('http://alistapart.com/article/design-like-a-teacher');
    * })();
    */

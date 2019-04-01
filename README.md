@@ -73,13 +73,8 @@ Constructor generates error instance
 **See**: https://mercury.postlight.com/web-parser/  
 <a name="new_MercuryWebParser_new"></a>
 
-### new MercuryWebParser(key)
+### new MercuryWebParser()
 SDK for mercury api
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| key | <code>string</code> | mercury api key |
 
 <a name="get"></a>
 
@@ -95,8 +90,9 @@ Get content of page
 
 **Example** *(Get single page)*  
 ```js
+import MercuryWebParser from '@frontender-magazine/mercury-sdk';
 (async () => {
-  const parser = new MercuryWebParser('NeBIXVwRCXVIS3lJC74dsRAMBOaIK6H5EEkFudvs');
+  const parser = new MercuryWebParser();
   const page = await parser.get('http://alistapart.com/article/design-like-a-teacher');
 })();
 ```
@@ -114,8 +110,9 @@ Get content of all pages
 
 **Example** *(Get all pages as array)*  
 ```js
+import MercuryWebParser from '@frontender-magazine/mercury-sdk';
 (async () => {
-  const parser = new MercuryWebParser('NeBIXVwRCXVIS3lJC74dsRAMBOaIK6H5EEkFudvs');
+  const parser = new MercuryWebParser();
   const pages = await parser.getAll('http://alistapart.com/article/design-like-a-teacher');
 })();
 ```
